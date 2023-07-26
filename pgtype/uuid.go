@@ -252,7 +252,7 @@ func (c UUIDCodec) DecodeDatabaseSQLValue(m *Map, oid uint32, format int16, src 
 		return nil, err
 	}
 
-	return encodeUUID(uuid.Bytes), nil
+	return uuid.Bytes, nil
 }
 
 func (c UUIDCodec) DecodeValue(m *Map, oid uint32, format int16, src []byte) (any, error) {
